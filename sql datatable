@@ -1,19 +1,22 @@
-CREATE TABLE GroceryItems (
-    ItemID INT PRIMARY KEY,
-    ItemName VARCHAR(100),
-    Category VARCHAR(50),
-    PriceEuro DECIMAL(10,2),
-    Region VARCHAR(100)
+-- Updated schema using snake_case
+CREATE TABLE grocery_items (
+    item_id INT AUTO_INCREMENT PRIMARY KEY,
+    brand_name VARCHAR(100),
+    item_name VARCHAR(100),
+    category VARCHAR(50),
+    price_euro DECIMAL(10,2),
+    region VARCHAR(100)
 );
 
-INSERT INTO GroceryItems (ItemID, ItemName, Category, PriceEuro, Region) VALUES
-(1, 'Parmigiano Reggiano (200g)', 'Cheese', 5.90, 'Emilia-Romagna'),
-(2, 'Extra Virgin Olive Oil (1L)', 'Oils', 7.50, 'Tuscany'),
-(3, 'San Marzano Tomatoes (1kg)', 'Produce', 3.20, 'Campania'),
-(4, 'Prosciutto di Parma (150g)', 'Cured Meats', 6.80, 'Parma'),
-(5, 'Spaghetti No. 5 (500g)', 'Pasta', 1.20, 'Lazio'),
-(6, 'Basil Pesto (Jar)', 'Condiments', 2.90, 'Liguria'),
-(7, 'Fresh Mozzarella (Ball)', 'Cheese', 2.40, 'Campania'),
-(8, 'Chianti Red Wine (750ml)', 'Beverages', 8.50, 'Tuscany'),
-(9, 'Lemons (Pack of 4)', 'Produce', 2.10, 'Sicily'),
-(10, 'Espresso Coffee Beans (250g)', 'Beverages', 4.70, 'Piedmont');
+-- First 10 rows updated with actual Italian brands
+INSERT INTO grocery_items (brand_name, item_name, category, price_euro, region) VALUES
+('Parmareggio', 'Parmigiano Reggiano (200g)', 'Cheese', 5.90, 'Emilia-Romagna'),
+('Monini', 'Extra Virgin Olive Oil (1L)', 'Oils', 7.50, 'Tuscany'),
+('Mutti', 'San Marzano Peeled Tomatoes (400g)', 'Produce', 3.20, 'Campania'),
+('Citterio', 'Prosciutto di Parma (150g)', 'Cured Meats', 6.80, 'Parma'),
+('Barilla', 'Spaghetti No. 5 (500g)', 'Pasta', 1.20, 'Lazio'),
+('Buitoni', 'Basil Pesto (Jar)', 'Condiments', 2.90, 'Liguria'),
+('Galbani', 'Fresh Mozzarella (Ball)', 'Cheese', 2.40, 'Campania'),
+('Ruffino', 'Chianti Red Wine (750ml)', 'Beverages', 8.50, 'Tuscany'),
+('Campisi', 'Siracusa Lemons (Pack of 4)', 'Produce', 2.10, 'Sicily'),
+('Lavazza', 'Qualità Rossa Espresso Beans (250g)', 'Beverages', 4.70, 'Piedmont');
